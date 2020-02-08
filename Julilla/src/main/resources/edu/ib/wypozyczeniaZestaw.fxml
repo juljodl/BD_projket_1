@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane fx:id="obudowa" prefHeight="385.0" prefWidth="997.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ib.WypozyczeniaController">
+   <children>
+      <Label layoutX="364.0" layoutY="14.0" text="Wypożyczenia danego samochodu" />
+      <TableView fx:id="tabelaZestaw" layoutX="8.0" layoutY="38.0" prefHeight="290.0" prefWidth="981.0">
+        <columns>
+            <TableColumn prefWidth="75.0" text="ID" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="IdWypozyczenia" />
+                </cellValueFactory>
+            </TableColumn>
+
+          <TableColumn prefWidth="75.0" text="Nr. rej." >
+              <cellValueFactory>
+                  <PropertyValueFactory property="IdSamochod" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="75.0" text="Id klient" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="IdKlienta" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Data start" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="DataWypozyczenia" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Data stop" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="DataOddania" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Dł. geo. start" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="DlGeoStart" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Szer.geo.start" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="SzerGeoStart" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Dł.geo.stop" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="DlGeoStop" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Szer.geo.stop" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="SzerGeoStop" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Dystans" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="Dystans" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Kwota" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="Kwota" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Uszkodzenia" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="Uszkodzenia" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="wrocBtn" layoutX="415.0" layoutY="339.0" mnemonicParsing="false" onAction="#wrocBtnOnClick" text="Ok, Wracam" />
+   </children>
+</AnchorPane>
